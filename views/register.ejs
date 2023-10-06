@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="heading clip image">
+        Employee Review System | Register
+         </div>
+        
+         <div class="register-form">
+            <form action="/register/create" method="POST" data-multi-step>
+               
+               
+                    <span><label for="name">Name:</label></span>
+                    <input type="text" id="name" name="name" required/>
+                    
+                    <span><label for="age">Age:</label></span> 
+                     <input type="number" id="age" name="age" required/>
+         
+                     
+                
+                
+                    <span><label for="email">Email:</label></span> 
+                    <input type="email" id="email" name="email" required/>
+        
+                 
+                       
+                        
+               
+               
+                    <span><label for="sex">Sex:</label>
+                        <input type="radio" id="sexchoice1"
+                                name="sex" value="male" >
+                                <label for="sexchoice1">Male</label>
+    
+                                <input type="radio" id="sexchoice12"
+                                name="sex" value="female">
+                                <label for="sexchoice2">Female</label></span>
+                    
+                     
+    
+                       
+                        
+             
+               
+                     <span><label for="password">Password:</label></span>
+                            <input type="password" id="password" name="password"/> 
+                            
+                            <span><label for="confirm_password">Confirm Password:</label></span> 
+                                <input type="password" id="confirm_password" name="confirm_password" />
+    
+                               <p><sup>*</sup> Roles by default are not admin</p>
+                         <input type="submit" value="Register"/> 
+
+            </form>
+</body>
+</html>

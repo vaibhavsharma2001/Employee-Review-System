@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="heading clip image">
+        Employee Review System | Profile
+         </div>
+         <div class="heading clip image">
+          A CRM webApp
+         </div>
+         <div class="options">
+            <span>Hi, <%=dataAdmin[0].name%></span>
+            <a href="/profile">Homepage</a>
+            <a href="#"><span>Settings</span></a>
+            <a href="/logout">Logout</a>
+           </div>
+           <div class="info_bar_admin">
+           <div class="info_bar_picture_container">
+             <img src="/images/avatar.png">
+           </div>
+           <div>
+            <h3>Name : <%= data[0].name %></h3>
+            <h3>Age : <%= data[0].age %></h3>
+            <h3>Email : <%= data[0].email %></h3>
+            <h3>Sex : <%= data[0].sex %></h3>
+            <h3>Role : <%= data[0].role %></h3>
+            <h3>UserReview Score : <%= userScore %></h3>
+           </div>
+           
+           </div>
+           <div class="profileVisitByAdminContainer">
+            <div class="admin_scroll_container_box_heading">List of all employees</div>
+            <form action="/profileByAdmin/AssignReview/<%= data[0].name %>" method="POST">
+              
+              <div class="admin_scroll_container_box">
+                
+                
+                <% for(var i=0;i<people.length;i++){%>
+                  <div class="admin_scroll_container_box_items">
+                    <div class="admin_scroll_container_box_items_image">
+                      
+                      <img src="/images/avatar.png">
+                    </div>
+                    <div class="admin_scroll_container_box_items_info">
+                      <p><%=people[i].name%></p>
+                    <p><%=people[i].role%></p> 
+                    </div>
+                   
+                    <input name="names" type="checkbox" id="select_checkbox" value="<%=people[i].name%>" >
+                  </div>
+                 
+                <% } %>
+
+
+                <div class="review_scroll_button">
+                  <button id="submit_review" type="submit">Create Review</button>
+                </div>
+              </div>
+            
+                
+              
+            </form>
+           
+          
+           </div>
+           
+            
+  
+           
+
+<div class="profile_admin_addUsers">
+    <!-- <div class="register-form">-->
+       <form action="/adminUpdate/<%= data[0].email %>" method="POST" >
+                 
+          
+          
+               
+                           <span><label for="Role">Role:</label>
+                             <input type="radio" id="rolechoice1"
+                                     name="role" value="Employee" >
+                                     <label for="sexchoice1">Employee</label>
+           
+                                     <input type="radio" id="rolechoice2"
+                                     name="role" value="Admin">
+                                     <label for="rolechoice2">Admin</label></span>
+ 
+                  
+                   
+        
+          
+ 
+                          
+                    <input  style="margin-top: 15px;" type="submit" value="Change Role"/> 
+ 
+       </form>
+   <!--</div>-->
+ </div>
+ <script src="/js/app.js"></script>
+</body>
+</html>
